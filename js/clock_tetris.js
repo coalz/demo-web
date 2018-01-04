@@ -9,14 +9,13 @@
 	var w = canvas.width, h = canvas.height;
 	var color_bg = '#333';// rgba(51,51,51,1)
 	var color_bk = '#fff';// rgba(255,255,255,1)
-
 	
 	var time = [8, 8, 8, 8];
 	var newTime = getTime();
 	var bw = 30;
 	var updating = false;
 
-	// number
+	// numbers
 	var numbers = [
 		// 0
 		[[1, 1, 1], [1, 0, 1], [1, 0, 1], [1, 0, 1], [1, 1, 1]],
@@ -76,7 +75,6 @@
 		drawNumber(hs, dy, numbers[time[1]], downColor, true);
 		drawNumber(mt, dy, numbers[time[2]], downColor, true);
 		drawNumber(ms, dy, numbers[time[3]], downColor, true);
-		//c * Math.sqrt(1 - (t = t/d - 1) * t) + b;
 		dy += 5;
 		if (dy >= sy) {
 			time = newTime;
