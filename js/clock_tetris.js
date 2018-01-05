@@ -62,9 +62,7 @@
             updating = false;
             return;
         }
-        ctx.clearRect(0, 0, w, h);
-        ctx.fillStyle = color_bg;
-        ctx.fillRect(0, 0, w, h);
+        clearBackground();
         drawSep();
         drawNumber(ht, sy, numbers[time[0]], color_bk);
         drawNumber(hs, sy, numbers[time[1]], color_bk);
@@ -121,6 +119,12 @@
         ctx.rect(x, y, pw, ph);
         ctx.fill();
         ctx.stroke();
+    }
+
+    function clearBackground() {
+        ctx.clearRect(0, 0, w, h);
+        ctx.fillStyle = color_bg;
+        ctx.fillRect(0, 0, w, h);
     }
 
     function getTime() {
